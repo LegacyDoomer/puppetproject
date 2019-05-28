@@ -1,0 +1,13 @@
+---
+
+# Verzeichnis zu temporären Zwischenspeicherung von Umgebungsdaten
+:cachedir: '/var/cache/r10k'
+
+# Eine Liste von Quellen von Puppetumgebungen kann hier angegeben werden.
+:sources:
+  # Diese Konfiguration wird das unten genannte Projekt als allgemeine Umgebung verwenden, sowie jede
+  # git-branch des Projektes als eigenes Puppet-Environment in /etc/puppetlabs/code/environments abspeichern
+  # z.B. production, testing, <feature>
+  :my-org:
+    remote: '(SSH-Link zum Git-Projekt)/<Gitnutzer>@<Gitserver>:<Projektgruppe>/<Git-Projekt>.git'
+    basedir: '/etc/puppetlabs/code/environments'
